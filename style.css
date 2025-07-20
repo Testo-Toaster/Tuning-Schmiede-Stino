@@ -1,4 +1,4 @@
-* {
+📍* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -9,7 +9,6 @@ body {
     background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
     color: white;
 }
-
 header {
     display: flex;
     justify-content: center;
@@ -19,15 +18,8 @@ header {
     background-color: black;
     border-bottom: 4px solid #9b00ff;
     padding: 4rem;
-    text-align: right ;
+    text-align: center;
 }
-
-header a {
-    color: #00d9ff;
-    text-decoration: none;
-    font-size: 3.5rem;
-}
-
 .logo-left {
     position: absolute;
     left: 40px;
@@ -36,7 +28,6 @@ header a {
     object-fit: contain;
     transition: transform 0.5s;
 }
-
 /* Mittiges Bild */
 .logo-center {
     height: 100px;
@@ -44,23 +35,97 @@ header a {
     object-fit: contain;
     transition: transform 0.5s;
 }
-
 .logo-left:hover,
 .logo-center:hover {
     transform: scale(1.15);
 }
 
-/* Responsives Verhalten */
 @media (max-width: 600px) {
-    .logo-left {
-        height: 60px;
-    }
-
-    .logo-center {
-        height: 70px;
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
     }
 }
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    p, li {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+        height: auto;
+    }
 
+    .logo-left,
+    .logo-center {
+        position: static;
+        height: 60px;
+        max-width: 80vw;
+    }
+}
+/* Menü-Button */
+.menu-toggle {
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1rem;
+    color: white;
+    display: all; 
+}
+.menu-toggle:hover {
+    color: #00d9ff;
+    text-shadow: 0 0 8px #00d9ff, 0 0 16px #9b00ff;
+    transform: scale(1.15);
+    transition: 0.5s;
+}
+/* Navigation */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.5s;
+}
+
+.nav-links li a:hover {
+    color: #00d9ff;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px #00d9ff, 0 0 16px #9b00ff;
+    transform: scale(1.15);
+}
+
+/* Versteckt */
+.hidden {
+    display: none;
+}
+
+/* Mobile Verhalten */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        background-color: #111;
+        padding: 1rem;
+    }
+}
 nav {
     display: flex;
     justify-content: center;
@@ -68,14 +133,6 @@ nav {
     gap: 2rem;
     padding: 1rem;
 }
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: 0.5s;
-}
-
 nav a:hover {
     color: #00d9ff;
     letter-spacing: 2px;
@@ -84,8 +141,8 @@ nav a:hover {
 }
 
 section {
-    padding: 3rem;
-    max-width: 1000px;
+    padding: 2rem;
+    max-width: 1200px;
     margin: auto;
     transition: 0,5s;
 }
@@ -116,6 +173,7 @@ h3 {
     font-size: 1.1rem;
     padding: 0.3rem;
     text-shadow: 0 0 8px #00d9ff, 0 0 16px #9b00ff;
+    text-align: center;
 }
 
 p {
@@ -139,28 +197,53 @@ section summary:hover {
     text-shadow: 0 0 8px #00d9ff, 0 0 16px #9b00ff;
     transform: scale(1.15);
 }
-.hero {
-    text-align: center;
-    padding: 2rem;
-    justify-content: center;
-    align-items: center;
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
-.hero img {
-    position: absolute;
-    left: 40px;
-    height: 400px;
+.hero-text {
+    flex: 1 1 300px;
+    text-align: left;
+}
+
+.hero-image {
+    flex: 1 1 100px;
+    text-align: center;
+}
+
+.hero-image img {
     max-width: 100%;
-    object-fit: contain;
-    transition: transform 0.5s;
-    border-radius: 30px;
+    height: auto;
+    border-radius: 20px;
     box-shadow: 0 0 8px #00d9ff, 0 0 16px #9b00ff;
 }
 
-.reperaturangebote {
+/* Für Mobilgeräte */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .hero-image {
+        order: 2;
+        margin-top: 1rem;
+    }
+
+    .hero-text {
+        order: 1;
+        text-align: center;
+    }
 }
 
+/* .reperaturangebote {
+
+}
+*/
 .service {
     p{
         text-align: center;
@@ -176,12 +259,12 @@ section summary:hover {
 }
 
 .bild {
-  width: 150%;
-  aspect-ratio: 4 / 3; 
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 0 8px #00d9ff, 0 0 16px #9b00ff;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 10px;
+    box-shadow: 0 0 8px #00d9ff, 0 0 16px #9b00ff;
 }
+
 
 .bild img {
   width: 100%;
@@ -190,11 +273,11 @@ section summary:hover {
 }
 .contact-container {
   display: flex;
-  flex-wrap: wrap; /* wichtig für Mobilgeräte */
+  flex-wrap: wrap;
   gap: 20px;
   justify-content: space-between;
   align-items: flex-start;
-  max-width: 10000px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 30px;
   background-color: #111;

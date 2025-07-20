@@ -13,41 +13,57 @@
     <header>
         <img src="Bilder/Logo für Header.jpeg" alt="Simson S51" class="logo-left">
         <a href="index.html">
-            <img src="Bilder/Banner Transparent.png" href="index.html" alt="Logo" class="logo-center">
+            <img src="Bilder/Banner Transparent.png" alt="Logo" class="logo-center">
         </a>
     </header>
 
-    <nav>
-        <h2><a href="#leistungen">🛠️Unsere Reparaturangebote🛠️</a></h2>
-        <h2><a href="#service">🚀Unsere Service Angebote🚀</a></h2>
-        <h2><a href="#galerie">📸Galerie📸</a></h2>
-        <h2><a href="#kontakt">📨Kontakt📨</a></h2>
-        <h2><a href="#maps">📍Standort📍</a></h2>
+    <nav class="mobile-nav">
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+        <ul id="nav-links" class="nav-links hidden">
+            <li><a href="#leistungen">🛠️Unsere Reparaturangebote🛠️</a></li>
+            <li><a href="#service">🚀Unsere Service Angebote🚀</a></li>
+            <li><a href="#galerie">📸Galerie📸</a></li>
+            <li><a href="#kontakt">📨Kontakt📨</a></li>
+            <li><a href="#maps">📍Standort📍</a></li>
+        </ul>
     </nav>
 
-    <section class="hero">
+    <section>
         <h1>Deine Simson-Werkstatt in Schwerin</h1>
         <h3>Reparatur – Tuning – Leidenschaft</h3>
-        <br>
-        <img src="Bilder/wheelie EG.jpeg" alt="Simson S51">
-        <h2>Vorwort</h2>
-        <p>Willkommen bei Tuning Schmiede Stino, deiner Anlaufstelle für alles rund um Simson in Schwerin. Ich biete
-            professionelle Reparaturen,
-            individuelles Tuning und umfassenden Service für deine Simson S51 und andere Modelle. Ich stehe bereit, um
-            deine Wünsche zu erfüllen und dein Fahrzeug in Top-Zustand zu bringen.
-        </p>
-        <br>
-        <p>
-            Ich selber bin ein leidenschaftlicher Simson-Fahrer und habe jahrelange Erfahrung in der Reparatur und dem
-            Tuning. Ich möchte meine Leidenschaft mit dir teilen und dir helfen, das Beste aus
-            deiner Simson herauszuholen. Egal ob du eine einfache Reparatur benötigst oder ein individuelles Tuning
-            wünschst, ich bin für dich da. Lass uns gemeinsam deine Simson zum Strahlen bringen!
-        </p>
-        <br>
-        <p>Ich möchte mir hiermit neben meinem Studium etwas dazu verdienen und den Osteutschen-Kult aufrecht erhalten.
-            Schau dich um ob dir etwas gefällt und falls ja komm auf
-            mich zu und wir besprechen alles weitere. Ich freue mich auf dich!
-        </p>
+    </section>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2>Vorwort</h2>
+                <p>Willkommen bei Tuning Schmiede Stino, deiner Anlaufstelle für alles rund um Simson in Schwerin. Ich
+                    biete
+                    professionelle Reparaturen,
+                    individuelles Tuning und umfassenden Service für deine Simson S51 und andere Modelle. Ich stehe
+                    bereit, um
+                    deine Wünsche zu erfüllen und dein Fahrzeug in Top-Zustand zu bringen.
+                </p>
+                <br>
+                <p>
+                    Ich selber bin ein leidenschaftlicher Simson-Fahrer und habe jahrelange Erfahrung in der Reparatur
+                    und dem
+                    Tuning. Ich möchte meine Leidenschaft mit dir teilen und dir helfen, das Beste aus
+                    deiner Simson herauszuholen. Egal ob du eine einfache Reparatur benötigst oder ein individuelles
+                    Tuning
+                    wünschst, ich bin für dich da. Lass uns gemeinsam deine Simson zum Strahlen bringen!
+                </p>
+                <br>
+                <p>Ich möchte mir hiermit neben meinem Studium etwas dazu verdienen und den Osteutschen-Kult aufrecht
+                    erhalten.
+                    Schau dich um ob dir etwas gefällt und falls ja komm auf
+                    mich zu und wir besprechen alles weitere. Ich freue mich auf dich!
+                </p>
+            </div>
+            <div class="hero-image">
+                <img src="Bilder/wheelie EG.jpeg" alt="Simson S51">
+            </div>
+        </div>
     </section>
 
     <section id="leistungen" class="leistungen">
@@ -85,7 +101,8 @@
         <h1>🚀Unsere Service Angebote🚀</h1>
         <ul>
             <h2>Umbau auf Vape Zündung</h2>
-            <li>Wer eine Zuverlässiges Moped braucht, kommt früher oder später nicht um eine Vape Zündung herum. Der Umbau kann mit der gesamten Beleuchtung und Batterie vorgenommen werden, oder falls schon
+            <li>Wer eine Zuverlässiges Moped braucht, kommt früher oder später nicht um eine Vape Zündung herum. Der
+                Umbau kann mit der gesamten Beleuchtung und Batterie vorgenommen werden, oder falls schon
                 eine 12V Zündung verbaut ist, kann auch nur die Zündung getauscht werden.
             </li>
             <br>
@@ -94,7 +111,9 @@
         </ul>
         <ul>
             <h2>Umbau auf MVT Zündung</h2>
-            <li>Wer schon im Tuning unterwegs ist, der braucht eine MVT Zündung. Sie bietet eine Variable Zündwinkelverstellungen was mehr Leistung und Drehzahl bringt und sie bringt eine Innenliegende Schwungmasse
+            <li>Wer schon im Tuning unterwegs ist, der braucht eine MVT Zündung. Sie bietet eine Variable
+                Zündwinkelverstellungen was mehr Leistung und Drehzahl bringt und sie bringt eine Innenliegende
+                Schwungmasse
                 mit, wodurch die Gasanahme verbessert wird. Seit neusten gibt es auch eine MVT Zündung mit Licht.
             </li>
             <br>
@@ -103,7 +122,8 @@
         </ul>
         <ul>
             <h2>Liebhaber Service</h2>
-            <li>Umfangreicher Service um der Simson etwas gutes zu tun. Sie bekommt ein rundum Paket, angefangen vom Ölwechsel, bis hin zur Elsterglanz Politur. Perfekt um Sein Moped wieder in den 
+            <li>Umfangreicher Service um der Simson etwas gutes zu tun. Sie bekommt ein rundum Paket, angefangen vom
+                Ölwechsel, bis hin zur Elsterglanz Politur. Perfekt um Sein Moped wieder in den
                 Bestzustand zu bringen. Der Service beinhaltet:
                 <ul>
                     <li>Ölwechsel</li>
@@ -148,8 +168,10 @@
 
         <!-- Rechte Seite: Google Maps -->
         <div id="maps" class="contact-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2369.301278367311!2d11.376538477885317!3d53.57023947235515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47add9d185075a93%3A0x3d6b5ee2792bfbd6!2sTuning%20Schmiede%20Stino!5e0!3m2!1sde!2sde!4v1753036595923!5m2!1sde!2sde" width="100%" height="300" style="border:0;"
-                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2369.301278367311!2d11.376538477885317!3d53.57023947235515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47add9d185075a93%3A0x3d6b5ee2792bfbd6!2sTuning%20Schmiede%20Stino!5e0!3m2!1sde!2sde!4v1753036595923!5m2!1sde!2sde"
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
     </section>
@@ -157,7 +179,13 @@
     <footer>
         &copy; 2025 Tuning Schmiede Stino – Simson Werkstatt Schwerin
     </footer>
+    <script>
+        const toggle = document.getElementById("menu-toggle");
+        const links = document.getElementById("nav-links");
+
+        toggle.addEventListener("click", () => {
+            links.classList.toggle("hidden");
+        });
+    </script>
 </body>
-
 </html>
-
