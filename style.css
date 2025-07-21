@@ -138,13 +138,18 @@ header {
         padding: 1rem;
     }
 }
-
 nav {
     display: flex;
-    justify-content: center;
-    background: #111;
+    justify-content: left;
     gap: 2rem;
     padding: 1rem;
+
+    background: linear-gradient(-45deg, #1f00ea, #007ba4, #058e1a, #a30183);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    li, a{
+        align-content: center;
+    }
 }
 
 nav a:hover {
@@ -219,7 +224,11 @@ section summary:hover {
     align-items: left;
     flex-wrap: wrap;
     gap: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: #111;
 }
+
 
 .hero-text {
     flex: 1 1 300px;
@@ -266,6 +275,41 @@ section summary:hover {
         font-weight: bold;
     }
 }
+/*.bestellen {
+    display: flex;                  alles nebeneinander
+    justify-content: center;
+    align-items: center;
+}
+*/
+
+.bestellen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.mail-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  justify-content: center;
+  box-shadow: 0 0 8px #00d9ff, 0 0 16px #9b00ff;
+  background: linear-gradient(-45deg, #2f01fe, #097018, #cbc512, #db34cd);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+
+  transition: 0.5s;
+}
+.mail-button:hover {
+  transform: scale(1.15);
+}
 
 .galerie {
     display: grid;
@@ -299,10 +343,8 @@ section summary:hover {
     margin: 0 auto;
     padding: 30px;
     background-color: #111;
-
-    h1,
     p {
-        text-align: center;
+        text-align: left;
     }
 }
 
@@ -329,4 +371,10 @@ footer {
     padding: 2rem;
     background: #000;
     border-top: 2px solid #9b00ff;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
