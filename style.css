@@ -270,9 +270,21 @@ section summary:hover {
 }
 */
 .service {
+    text-align: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #111;
     p {
+        justify-content: center;
+        display: inline-block;
+        padding: 10px 20px;
+        box-shadow: 0 0 8px #00d9ff, 0 0 16px #9b00ff;
+        background: linear-gradient(-45deg, #2f01fe, #097018, #cbc512, #db34cd);
+        background-size: 400% 400%;
+        animation: gradientMove 15s ease infinite;
         text-align: center;
         font-weight: bold;
+        border-radius: 10px;
     }
 }
 /*.bestellen {
@@ -300,6 +312,7 @@ section summary:hover {
   border-radius: 6px;
   font-weight: bold;
   justify-content: center;
+
   box-shadow: 0 0 8px #00d9ff, 0 0 16px #9b00ff;
   background: linear-gradient(-45deg, #2f01fe, #097018, #cbc512, #db34cd);
   background-size: 400% 400%;
